@@ -10,6 +10,7 @@ I'm a growth and content marketer. I grew a crypto platform's X from 1K to 14K+ 
 claude-code-gtm-os/
 ├── templates/CLAUDE.md        # session rules, briefing format, read-before-you-work routing
 └── skills/
+    ├── brand-url-to-posts/    # brand URL -> brain -> brief -> drafts -> QC script -> approval
     ├── morning-run/           # chains 5 steps into one autonomous daily run
     ├── daily-pulse/           # 24h scan of your niche on X -> 5 topics + post ideas
     ├── community-signal-scanner/
@@ -27,6 +28,8 @@ claude-code-gtm-os/
 **One workspace, one routing file.** `CLAUDE.md` tells Claude what to read before each kind of task (voice file before content, project status before project work), how to brief me at session start, and what to update at the end. Context never gets lost between sessions.
 
 **raw, wiki, output.** Every area of the workspace has the same three folders. Raw inputs get distilled into wiki knowledge, and finished work goes to output. Skills read from wiki and write to output.
+
+**Quality is checked by code, not vibes.** `brand-url-to-posts` turns a brand URL into a sourced brand brain, a three-angle brief and drafts in a defined voice, then runs `qc.py`, which fails any draft with banned phrases, em dashes or an over-length post and warns on long hooks, hype words and numbers that don't appear in the sourced brain. Nothing posts without a human ticking it in `approval.md`.
 
 **Skills chain.** `community-signal-scanner` feeds `content-calendar-builder`. `kol-researcher` feeds `kol-dm-writer`. `morning-run` chains `daily-pulse`, brand intel, content angles, an opportunity scan and a log update every morning, and keeps going if one step fails.
 
